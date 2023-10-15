@@ -1,9 +1,10 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-
+#include <sstream>
 // Function to retrieve memory usage in kilobytes
 long getMemoryUsageKB() {
+    std::stringstream ss;
     std::ifstream statusFile("/proc/self/status");
     if (!statusFile) {
         std::cerr << "Failed to open status file." << std::endl;
