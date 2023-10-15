@@ -3,8 +3,9 @@
 #include <string>
 #include <chrono>
 #include <thread>
-
+#include <sstream>
 void monitorResources() {
+    std::stringstream ss;
     while (true) {
         std::ifstream statFile("/proc/stat");
         std::ifstream meminfoFile("/proc/meminfo");
