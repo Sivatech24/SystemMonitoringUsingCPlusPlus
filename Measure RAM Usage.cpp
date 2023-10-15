@@ -1,9 +1,10 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-
+#include <sstream>
 // Function to retrieve RAM usage in kilobytes
 long getRAMUsageKB() {
+    std::stringstream ss;
     std::ifstream meminfoFile("/proc/meminfo");
     if (!meminfoFile) {
         std::cerr << "Failed to open meminfo file." << std::endl;
